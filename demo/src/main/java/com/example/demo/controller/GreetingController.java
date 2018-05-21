@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.bo.Admin;
+import com.example.demo.bo.BaseUser;
+import com.example.demo.bo.Employee;
 import com.example.demo.bo.Greeting;
 import com.example.demo.bo.GreetingAnother;
 import com.example.demo.bo.GreetingCustomerSSN;
@@ -53,4 +56,15 @@ public class GreetingController {
 	public GreetingCustomerSSN greeting(@RequestParam("greetingCustomerSsn") GreetingCustomerSSN greetingCustomerSsn) {
 		return greetingCustomerSsn;
 	}
+
+	@GetMapping("/userAdmin")
+	public BaseUser getAdmin(@RequestParam("profileType") Admin admin) {
+		return admin;
+	}
+
+	@GetMapping("/userEmployee")
+	public BaseUser getEmployee(@RequestParam("profileType") Employee employee) {
+		return employee;
+	}
+
 }

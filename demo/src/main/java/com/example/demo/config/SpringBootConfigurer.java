@@ -24,16 +24,6 @@ public class SpringBootConfigurer extends WebMvcConfigurerAdapter {
 	public void addFormatters(FormatterRegistry registry) {
 		registry.addConverter(new StringToGreetingConverter());
 		registry.addConverter(new GreetingCustomerSSNConverter());
+		registry.addConverterFactory(new StringToBaseUserConverterFactory());
 	}
-
-	/*@Bean
-	public ConversionService getConversionService() {
-		ConversionServiceFactoryBean bean =  new ConversionServiceFactoryBean();
-		HashSet<Converter> set = new HashSet();
-		set.add(new SSNConverter());
-		bean.setConverters(set);
-		bean.afterPropertiesSet();
-		return bean.getObject();
-	}*/
-
 }
