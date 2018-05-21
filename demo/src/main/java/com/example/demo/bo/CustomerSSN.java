@@ -1,9 +1,12 @@
 package com.example.demo.bo;
 
-public class CustomerSSN {
+import java.io.Serializable;
+
+public class CustomerSSN implements Serializable {
 	private int area;
 	private int group;
 	private int serial;
+
 
 	public CustomerSSN(int a, int g, int s) {
 		this.area = a;
@@ -34,4 +37,11 @@ public class CustomerSSN {
 	public void setSerial(int serial) {
 		this.serial = serial;
 	}
+
+	@Override
+	public String toString() {
+		return "CustomerSSN [area=" + area + ", group=" + group + ", serial=" + serial + "]";
+	}
+
+
 }
