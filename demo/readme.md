@@ -102,7 +102,8 @@ check sysout
 ====
 
 
-
+ ConverterFactory, GenericConverter, and ConditionalGenericConverter
+ 
 
 https://stackoverflow.com/questions/13048368/difference-between-spring-mvc-formatters-and-converters
 
@@ -114,3 +115,19 @@ You cannot, for example, write a formatter that converts a Long to a Date. Examp
 In addition, formatters' messages can be localized.
 
 Conclusion: formatters are suitable in the web environment, such as a Spring MVC application.
+
+
+
+=====================
+
+#Conversion Factory
+
+
+http://localhost:2018
+/userAdmin
+?profileType=ADMIN
+
+http://localhost:2018
+/userEmployee
+?profileType=Employee
+
