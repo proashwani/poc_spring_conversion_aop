@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.math.BigDecimal;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,4 +68,8 @@ public class GreetingController {
 		return employee;
 	}
 
+	@PostMapping("/genericConvertor")
+	public ResponseEntity<Object> useGenericConvertor(@RequestParam("salary") BigDecimal salary) {
+		return ResponseEntity.ok("OK-"+salary);
+	}
 }
