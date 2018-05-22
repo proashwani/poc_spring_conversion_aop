@@ -25,5 +25,6 @@ public class SpringBootConfigurer extends WebMvcConfigurerAdapter {
 		registry.addConverter(new StringToGreetingConverter());
 		registry.addConverter(new GreetingCustomerSSNConverter());
 		registry.addConverterFactory(new StringToBaseUserConverterFactory());
+		registry.addConverter(new GenericBigDecimalConverter());
 	}
 }

@@ -15,5 +15,4 @@ public class Employee extends BaseUser {
 	public void setProfileType(String profileType) {
 		this.profileType = profileType;
 	}
-
 }
